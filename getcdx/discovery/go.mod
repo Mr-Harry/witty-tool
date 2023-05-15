@@ -1,4 +1,4 @@
-module github.com/axengine/utils/etcdx/discovery
+module github.com/Mr-Harry/witty-tool/getcdx/discovery
 
 go 1.20
 

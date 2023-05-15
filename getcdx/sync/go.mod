@@ -1,4 +1,4 @@
-module github.com/axengine/utils/etcdx/sync
+module github.com/Mr-Harry/witty-tool/getcdx/sync
 
 go 1.20
 

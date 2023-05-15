@@ -1,4 +1,4 @@
-module github.com/axengine/utils/etcdx/master
+module github.com/Mr-Harry/witty-tool/getcdx/master
 
 go 1.20
 

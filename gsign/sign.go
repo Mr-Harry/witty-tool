@@ -1,11 +1,10 @@
-package httpx
+package gsign
 
 import (
 	"bytes"
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/axengine/utils/sign"
 	"io"
 	"net/http"
 	"net/url"
@@ -144,15 +143,15 @@ func (p *APISign) ToSignRaw(req *http.Request) (string, error) {
 func signHash(method Method, rawStr, secretKey []byte) (hash string) {
 	switch method {
 	case HmacSha1:
-		hash = sign.HMACSha1B64(rawStr, secretKey)
+		hash = HMACSha1B64(rawStr, secretKey)
 	case HmacSha256:
-		hash = sign.HMACSha256B64(rawStr, secretKey)
+		hash = HMACSha256B64(rawStr, secretKey)
 	case HmacSha1Hex:
-		hash = sign.HMACSha1Hex(rawStr, secretKey)
+		hash = HMACSha1Hex(rawStr, secretKey)
 	case HmacSha256Hex:
-		hash = sign.HMACSha256Hex(rawStr, secretKey)
+		hash = HMACSha256Hex(rawStr, secretKey)
 	default:
-		hash = sign.HMACSha256Hex(rawStr, secretKey)
+		hash = HMACSha256Hex(rawStr, secretKey)
 	}
 	return
 }
